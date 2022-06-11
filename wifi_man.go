@@ -64,7 +64,7 @@ func main() {
 			}
 			// получаем список всех доступных сетей и
 			//если ее  нет в списке доступных
-			iw_list_scan_str, _ := exec.Command("sudo", "iwlist", "wlx00c0caaebab6", "scan").Output()
+			iw_list_scan_str, _ := exec.Command("sudo", "iwlist", "wlan0", "scan").Output()
 			if !strings.Contains(string(iw_list_scan_str), bssid) {
 				continue //новая итерация
 			}
